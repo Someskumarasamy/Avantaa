@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AVANTAA - LOGIN</title>
+  <meta name="description" content="Avantta 2k17 25+ events the showcase & impact difficult skills those who pine and hancker the excel...">
+  <meta name="author" content="AVANTAA WEB DESIGN TEAM" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/font-awesome.css">
+<link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="css/style2.css">
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+</head>
+<body>
+<div id="preloader"></div>
+    <div id="wrapper" style="background:url(./images/demo-1-bg.jpg);">
+    
+        <!-- Sidebar -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       AVANTAA
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="./index.html#about"><i class="fa fa-info"></i>About</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Events</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>Register</a>
+                </li>
+ 		<li>
+                    <a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+<!-- scripts -->
+<script src="./js/jquery.js"></script>
+<script src="./js/particles.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script> 
+	$(window).on('load', function() {
+		$('#preloader').fadeOut('slow');
+	});
+        $(document).ready(function () {
+	  var trigger = $('.hamburger'),
+	      overlay = $('.overlay'),
+	     isClosed = false;
+
+	    trigger.click(function () {
+	      hamburger_cross();      
+	    });
+
+	    function hamburger_cross() {
+
+	      if (isClosed == true) {          
+		overlay.hide();
+		trigger.removeClass('is-open');
+		trigger.addClass('is-closed');
+		isClosed = false;
+	      } else {   
+		overlay.show();
+		trigger.removeClass('is-closed');
+		trigger.addClass('is-open');
+		isClosed = true;
+	      }
+	  }
+	  
+	  $('[data-toggle="offcanvas"]').click(function () {
+		$('#wrapper').toggleClass('toggled');
+	  });  
+	});
+</script>
+</body>
+</html>
